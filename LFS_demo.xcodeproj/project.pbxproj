@@ -15,6 +15,7 @@
 		13226CDC240524A30003A045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13226CDB240524A30003A045 /* Assets.xcassets */; };
 		13226CDF240524A30003A045 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13226CDD240524A30003A045 /* LaunchScreen.storyboard */; };
 		13226CE2240524A30003A045 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13226CE1240524A30003A045 /* main.m */; };
+		DB007C35FF8A3F9815A28F3D /* libPods-LFS_demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C68A679CA733DAB739E93842 /* libPods-LFS_demo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,9 @@
 		13226CDE240524A30003A045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13226CE0240524A30003A045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13226CE1240524A30003A045 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C68A679CA733DAB739E93842 /* libPods-LFS_demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LFS_demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D71CBE2063786AF76AB9C1E4 /* Pods-LFS_demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFS_demo.debug.xcconfig"; path = "Target Support Files/Pods-LFS_demo/Pods-LFS_demo.debug.xcconfig"; sourceTree = "<group>"; };
+		DDD147C0518F20D19B2395A8 /* Pods-LFS_demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFS_demo.release.xcconfig"; path = "Target Support Files/Pods-LFS_demo/Pods-LFS_demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB007C35FF8A3F9815A28F3D /* libPods-LFS_demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +54,8 @@
 			children = (
 				13226CCB2405249F0003A045 /* LFS_demo */,
 				13226CCA2405249F0003A045 /* Products */,
+				6292679053519FE38EA29FAD /* Pods */,
+				EAE0C863259BDE59C9CF0D67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +86,24 @@
 			path = LFS_demo;
 			sourceTree = "<group>";
 		};
+		6292679053519FE38EA29FAD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D71CBE2063786AF76AB9C1E4 /* Pods-LFS_demo.debug.xcconfig */,
+				DDD147C0518F20D19B2395A8 /* Pods-LFS_demo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EAE0C863259BDE59C9CF0D67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C68A679CA733DAB739E93842 /* libPods-LFS_demo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,6 +111,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13226CE5240524A30003A045 /* Build configuration list for PBXNativeTarget "LFS_demo" */;
 			buildPhases = (
+				2FA6C14FEE35D6D6AFB9983B /* [CP] Check Pods Manifest.lock */,
 				13226CC52405249F0003A045 /* Sources */,
 				13226CC62405249F0003A045 /* Frameworks */,
 				13226CC72405249F0003A045 /* Resources */,
@@ -143,6 +169,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2FA6C14FEE35D6D6AFB9983B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LFS_demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		13226CC52405249F0003A045 /* Sources */ = {
@@ -291,6 +342,7 @@
 		};
 		13226CE6240524A30003A045 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D71CBE2063786AF76AB9C1E4 /* Pods-LFS_demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -308,6 +360,7 @@
 		};
 		13226CE7240524A30003A045 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDD147C0518F20D19B2395A8 /* Pods-LFS_demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
